@@ -1,0 +1,13 @@
+<button class="btn btn-primary"
+(click)="onToggleParagraph()"
+>Display details</button> {{DisplayText}}
+
+<hr>
+<p
+*ngFor="let toggle of Toggles"
+[ngStyle]="{backgroundColor:getBgColor(toggle)}"
+[ngClass]="{'grande' : toggle > 4}"
+>
+- This is hit n. {{toggle}}
+</p>
+

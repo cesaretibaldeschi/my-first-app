@@ -12,9 +12,7 @@ serverCreationStatus="No server was created."
 username="";
 serverCreated=false;
 servers=["Test Server", "Test Server 2"];
-DisplayText="";
-TextVisibility= "none";
-Toggles=[];
+
 
 
 
@@ -31,19 +29,6 @@ ngOnInit(): void {
 
 }
 
-onToggleParagraph(){
-
-  if(this.TextVisibility==="none"){
-    this.TextVisibility="block";
-    this.DisplayText="Secret password = Tuna";
-
-  }else{
-    this.TextVisibility="none";
-    this.DisplayText="";
-  }
-
-  this.Toggles.push(this.TextVisibility)
-}
 
 
 onCreateServer(){

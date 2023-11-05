@@ -8,6 +8,7 @@ import { warningAlertComponent } from './WarningAlert/warningAlert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from '@angular/forms';
 import { LoggerComponent } from './logger/logger.component';
+import { Exer02Component } from './exer02/exer02.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { LoggerComponent } from './logger/logger.component';
     warningAlertComponent,
     SuccessAlertComponent,
     LoggerComponent,
+    Exer02Component,
   ],
   imports: [
     BrowserModule,

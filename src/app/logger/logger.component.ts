@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./logger.component.css']
 })
 export class LoggerComponent {
-  loggerText="";
-  i=0;
+  loggerText="testo";
+  k:number=0;
 
+  getLoggerId(){
+    this.k++;
+    return this.k;
 
-
+  }
 }

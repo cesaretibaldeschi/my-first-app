@@ -2,12 +2,17 @@
 (click)="onToggleParagraph()"
 >Display details</button> {{DisplayText}}
 
+<p *ngIf="textVisible; else NonVisibile">Ora è visibile</p>
+<ng-template #NonVisibile>
+  <p>Il testo è nascosto</p>
+</ng-template>
+
 <hr>
 <p
-*ngFor="let toggle of Toggles"
-[ngStyle]="{backgroundColor:getBgColor(toggle)}"
-[ngClass]="{'grande' : toggle > 4}"
+*ngFor="let toggle of Toggles; let i=index"
+[ngStyle]="{backgroundColor:getBgColor(i+1)}"
+[ngClass]="{'grande' : i >= 4}"
 >
-- This is hit n. {{toggle}}
+- This is hit n. {{i}} {{toggle}}
 </p>
 

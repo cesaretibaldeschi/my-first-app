@@ -11,6 +11,7 @@ export class Exer02Component {
   Toggles=[];
   i:number=0;
   toggleStatus:string="off";
+  textVisible:boolean=false;
 
   onToggleParagraph(){
     this.i++;
@@ -18,12 +19,16 @@ export class Exer02Component {
     {
       this.toggleStatus="on";
       this.DisplayText="Tuna fish";
+      this.textVisible=true;
 
     }else{
       this.toggleStatus="off";
       this.DisplayText="";
+      this.textVisible=false;
+
     }
-    this.Toggles.push(this.i)
+    // this.Toggles.push(this.i)
+    this.Toggles.push(new Date())
   }
 
 

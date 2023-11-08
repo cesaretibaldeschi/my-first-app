@@ -1,16 +1,13 @@
 <button class="btn btn-primary"
 (click)="onToggleParagraph()"
 >Display details</button> {{DisplayText}}
-<p *ngIf="getToggleStatus()==='off'; else Acceso">SPENTO</p>
-<ng-template #Acceso>
-  <p>ACCESO</p>
-</ng-template>
+
 <hr>
 <p
-*ngFor="let toggle of Toggles; let i = index"
-[ngStyle]="{backgroundColor:getBgColor(i)}"
-[ngClass]="{'grande' : i >= 4}"
+*ngFor="let toggle of Toggles"
+[ngStyle]="{backgroundColor:getBgColor(toggle)}"
+[ngClass]="{'grande' : toggle > 4}"
 >
-- This is hit n. {{i+1}}
+- This is hit n. {{toggle}}
 </p>
 

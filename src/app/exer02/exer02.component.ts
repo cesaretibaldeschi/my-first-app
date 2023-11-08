@@ -12,6 +12,10 @@ export class Exer02Component {
   i:number=0;
   toggleStatus:string="off";
 
+  getToggleStatus(){
+    return this.toggleStatus;
+  }
+
   onToggleParagraph(){
     this.i++;
     if (this.toggleStatus==="off")
@@ -28,7 +32,7 @@ export class Exer02Component {
 
 
   getBgColor(iToggle:number){
-    if(iToggle>4){
+    if(iToggle>=4){
       return "darkblue";
     }else{
       return "pink";
